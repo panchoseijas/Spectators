@@ -1,0 +1,42 @@
+.footer{
+    height: fit-content;
+}
+.foot{
+    margin: auto;
+    display:grid;
+    height: fit-content;
+    grid-template-columns: 30% auto;
+    grid-template-areas: 'icono redS';
+}
+.foot img{
+    grid-area: icono;
+    width: 50px;
+    height: 50px;
+    margin:auto;
+}
+
+.foot p{
+    grid-area: redS;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    padding-left: 5px;
+}
+
+.footer{
+    max-width: 1200px;
+    height: 100px;
+    color: white;
+    padding-left: 5px;
+    margin-top: 5px;
+    grid-template-columns: 25% auto;
+    background-color: #900;
+    border-radius: 10px;
+    display:grid;
+    margin:auto;
+    grid-template-columns: repeat(4,minmax(20px,300px)) ;
+    justify-content: center;
+    position:relative;
+    margin-top: 20px;
+    z-index: 0;
+}

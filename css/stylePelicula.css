@@ -1,0 +1,545 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+}
+.topnav {
+    max-width: 1200px;
+    margin:  auto;
+    padding: 10px 15px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 25% auto;
+    background-color: #900;
+    border-radius: 10px;
+}
+
+.topnav ul li{
+    display: inline;
+    list-style-type: none;
+}
+
+.topnav a{
+    float:right;
+    letter-spacing: .1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #eee;
+    font-size: 17px;
+    padding: 8px 11px ;
+    margin-right: 5px;
+}
+.topnav .logo a{
+    float:left;
+    height: 50px;
+}
+.topnav a:hover{
+    background-color:darkred;
+    color: black;
+    font-size: 17px;
+    border-radius:10%;
+}
+
+.list-item{
+    margin-left:10px;
+    text-transform: uppercase;
+    padding:10px;
+}
+.logo-menu{
+    display:none;
+}
+
+.logo img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.main-wrapper{
+    max-width: 1200px;
+    margin:auto;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    object-fit: cover;
+    grid-template-rows: 585px 355px;
+    grid-gap: 10px;
+    grid-template-areas:
+    'trailer'
+    'poster_Puntaje' ;
+}
+
+
+.poster_Puntaje{
+    height: 340px;
+    padding: 5px;
+    grid-area: poster_Puntaje;
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-gap:15px;
+    grid-template-areas:
+        'poster puntaje'
+}
+
+
+.poster{
+    grid-area: poster;
+    object-fit: cover;
+
+}
+
+iframe{
+    width: 99%;
+    grid-area: trailer;
+    height: 100%;
+    padding: 5px;
+    padding-bottom: 0;
+    border-radius: 10px;
+}
+
+.poster img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.puntaje{
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    grid-area: puntaje;
+    background-color: lightgrey;
+    grid-template-rows: 100px 40px auto;
+    grid-gap: 5px;
+    grid-template-areas:
+    'titulo'
+    'genero'
+    'estrellas' ;
+}
+
+.puntaje button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.puntaje img{
+    width: 35px;
+    height: 35px;
+    margin: auto;
+}
+.puntaje h2{
+    grid-area: titulo;
+}
+
+.genero{
+    grid-area: genero;
+    font-size: 17px;
+    margin: 0
+}
+
+.estrellas{
+    grid-area: estrellas;
+    font-size: 50px;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    margin: 0;
+    padding-top: 25px;
+}
+input[type="radio"] {
+    display: none;
+}
+
+.estrellas{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    color: orange;
+}
+
+
+
+.content{
+    position: relative;
+    text-align: justify;
+    padding: 10px;
+}
+
+
+.movie-info{
+    grid-area: info;
+    
+}
+
+.content h3{
+    font-size: 20px;
+    padding-left: 30px;
+    font-weight: bolder;
+    background-color: rgb(216, 54, 54);
+    color: lightgrey;
+}
+
+.datos{
+    display:grid;
+    grid-template-columns: 32% auto;
+    grid-gap:15px;
+    grid-template-areas:
+        'tipo dato'
+}
+
+.izq{
+    grid-area: tipo;
+    text-align: right;
+    font-weight: bold;
+}
+
+.datos p{
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+.der{
+    grid-area: dato;
+    text-align: left;
+}
+
+
+.reparto{
+    margin: auto;
+}
+
+.reparto p{
+    margin:0;
+    padding: 2px;
+}
+ .reparto img{
+    height: 200px;
+    width: 150px;
+}
+
+.actores-izq{
+    grid-area: actores-izq;
+    padding-left: 0;
+}
+
+.actores-der{
+    grid-area: actores-der;
+    padding-left: 10px;
+}
+
+
+.wrapper-reparto{
+    display: grid;
+    margin: auto;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: 'actores-izq actores-der';
+    grid-gap: -5px;
+    width: min-content;
+}
+
+.wrapper-reparto ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 5px;
+    border: 2px solid rgb(216, 54, 54);
+    border-radius: 5px;
+    margin: auto;
+}
+
+.nomAct{
+    font-size: 14px;
+    font-weight: bold ;
+}
+
+.personaje{
+    font-size: 12px;
+    color:gray;
+    font-style: italic;
+}
+
+.actores-der{
+    float: left;
+}
+.caja-resena{
+    height: 260px;
+    width: 600px;
+    border-color: rgb(216, 54, 54);
+    border-style: solid;
+    margin: auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+textarea{
+    width: 99%;
+}
+
+.perfil-estrellas{
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-gap: 10px;
+    grid-template-areas: 
+        'img nombre-estrellas';
+    grid-gap: 0;
+    
+}
+.perfil-estrellas img{
+    grid-area: img;
+    max-height: 50px;
+    border-radius: 15px;
+}
+
+.perfil-estrellas p{
+    grid-area: nombre-estrellas;
+}
+
+.calificacion{
+    grid-area: nombre-estrellas;
+    position: relative;
+    font-size: 35px;
+    right: 5px;
+    margin:0;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+
+label:hover,
+label:hover ~ label {
+    color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+    color: orange;
+}
+
+
+.caja-texto {
+    padding: 5px;
+    
+}
+
+.caja-texto textarea{
+    border-radius: 10px;
+}
+
+.caja-critica p{
+    margin: 5px;
+}
+
+.boton{
+    float: right;
+    border-radius: 10px;
+    position: relative;
+    right: 10px;
+    bottom: 2px;
+}
+
+.caja-critica{
+    height: min-content;
+    width: 99%;
+    border-color: rgb(216, 54, 54);
+    border-style: solid;
+    margin: 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+.criticas ul{
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+.criticas ul li{
+    list-style: none;
+    display: block;
+}
+
+.criticas .perfil-estrellas .estrellas{
+    font-size: 30px;
+    padding: 0;
+}
+
+.caja-critica p{
+    padding: 5px;
+}
+
+
+.poster-critica{
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-areas: "poster caja";
+    grid-gap: 10px;
+    height: 150px;
+    margin-bottom: 40px;
+
+}
+
+.titulo-estrellas{
+    display: grid;
+    grid-template-areas: "titulo estrellas";
+}
+
+.titulo-estrellas .titulo{
+    grid-area: titulo;
+    font-weight: bold;
+    
+}
+
+h5{
+    margin: 5px;
+    padding: 5px;    
+}
+
+
+
+.Poster img{
+    max-height: 170px;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+.criticas .titulo-estrellas .estrellas{
+    font-size: 30px;
+    padding: 0;
+}
+.titulo-estrellas .estrellas{
+    grid-area: estrellas;
+    
+}
+
+
+
+@media screen and (max-width: 1000px){
+    .wrapper{
+        grid-template-areas:
+        'trailer'
+        'poster_Puntaje'
+    }
+    .topnav{
+        grid-template-columns: 10% auto;
+    }
+
+    
+    .topnav{
+        margin-top: 0;
+    }
+    .poster_Puntaje{
+        grid-template-columns: 25% auto;
+    }
+
+    .nomAct{
+        font-size: 15px;
+        font-weight: bold ;
+    }
+    
+    .personaje{
+        font-size: 14px;
+        color:gray;
+        font-style: italic;
+    }
+    
+    .wrapper-reparto{
+        grid-template-rows: max-content max-content;
+        grid-template-areas: 
+        'actores-izq'
+        'actores-der';
+        grid-gap: 50;
+    }
+    .actores-der{
+        padding-left: 0;
+    }
+
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 700px){
+    .logo{
+        grid-column: 1/3;
+    }
+    .nav-items{
+        grid-column: 1/5;
+        text-align: center;
+    }
+    .topnav ul li{
+        display:block;
+    }
+    .topnav ul {
+        padding:0;
+    }
+
+    .topnav a{
+        float: none;
+    }
+
+    .topnav a:hover{
+        color: black;
+    }
+    .right-column{
+        display:none;
+    }
+    .logo-menu{
+        display:inline;
+        grid-column: 4/5;
+        color:#333;
+        padding:5px;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+
+    .logo-menu{
+        cursor:pointer;
+    }
+
+    .logo-menu img{
+        max-height: 50px;
+        float: right;
+        padding: 5px;
+    }
+    .footer{
+        grid-column: 1/-1;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+    .mobile-show{
+        display: block;
+    }
+
+    .poster{
+        display: none;
+    }
+
+    .poster_Puntaje{
+        grid-template-areas:
+            'puntaje puntaje'
+    }
+
+    .nomAct{
+        font-size: 12px;
+        font-weight: bold ;
+    }
+    
+    .personaje{
+        font-size: 10px;
+        color:gray;
+        font-style: italic;
+    }
+    .caja-resena {
+        width: 95%;
+    }
+
+    textarea{
+        width: 99%
+    }
+
+    
+}
